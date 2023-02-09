@@ -1,0 +1,8 @@
+n = int(input())
+array = []
+for i in range(n):
+    name, kor, eng, math = map(str,input().split())
+    array.append([name,int(kor),int(eng),int(kor)])
+array.sort(key=lambda x: (-x[1],x[2],-x[3],x[0]))
+for i in range(n):
+    print(array[i][0])
