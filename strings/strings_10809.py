@@ -1,5 +1,7 @@
 string = input()
-count = [0] * 26
-for i in string:
-    count[ord(i)-97] += 1
-print(*count)
+count = 'abcdefghijklmnopqrstuvwxyz'
+for i in count:
+    if i in string:
+        print(string.index(i), end=" ")
+    else:
+        print(-1, end=" ")
